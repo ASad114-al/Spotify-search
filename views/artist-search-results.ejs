@@ -1,0 +1,28 @@
+<%- include  ('partalis/head')%> 
+
+
+
+
+<main id="main_artist">
+    <section id="boxes">
+        <%artistData.forEach(element=>{%>
+        <article id="articles"> <% if (element.images.length!=0) { %>
+            <img src="<%=element.images[0].url%>" alt=“”>
+            <% } else{ %>
+            <img src="/img/emptyImg.svg" alt="">
+            <% } %>
+            <div>
+                <h1><%=element.name%> </h1>
+                <a id="btn" href="/albums/<%=element.id%>">View Album</a>
+            </div>
+        </article>
+        <%})%>
+    </section>
+</main>
+
+
+
+
+
+
+<%- include  ('partalis/footer')%> 

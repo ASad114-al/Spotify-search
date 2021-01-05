@@ -1,0 +1,17 @@
+
+<%- include  ('partalis/head')%> 
+<main id="main_artist">
+    <section id="boxes">
+       
+        <%albumsData.forEach(element=>{%>
+        <article id="articles">
+            <img src="<%=element.images[0].url%>" alt=“”>
+            <div>
+                <h1><%=element.name%> </h1>
+                <a id="btn" href="/tracks/<%=element.id%>">View Tracks</a>
+            </div>
+        </article>
+        <%})%>
+    </section>
+</main>
+<%- include  ('partalis/footer')%> 
